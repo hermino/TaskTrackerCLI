@@ -1,0 +1,12 @@
+[project]
+name = "TaskTrackerCLI"
+version = "0.0.1"
+
+dependencies = [
+    "pydantic",
+    "pytest",
+    "pytest-cov"
+]
+
+[project.scripts]
+task-cli = "task_tracker.main:main"
