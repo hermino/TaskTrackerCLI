@@ -1,8 +1,11 @@
 import json
 from .constants import STORAGE
-from .task import Task
+
 
 class Storage:
+
+    _ids = None
+
     @property
     def list(self) -> dict:
         """
@@ -10,9 +13,12 @@ class Storage:
         :return:
         """
         with open(STORAGE, "r", encoding="utf-8") as storage:
-            data = json.load(storage)
+            tasks = json.load(storage)
 
-        return data
+            if not self._ids:
+                self._ids = set([task["id"] for task in tasks])
+
+        return tasks
 
     def search(self, id: int):
         """
@@ -20,16 +26,45 @@ class Storage:
         :param id:
         :return:
         """
-        return next((Task(**data) for data in self.list if data["id"] == id), None)
+        return next((task for task in self.list if task["id"] == id), None)
 
-    def store(self, data: dict):
+    def store(self, task: dict):
         """
 
-        :param data:
+        :param task:
         :return:
         """
-        current_data = self.list
-        current_data.append(data)
+        current_task = self.list
+
+        if task["id"] not in self._ids:
+            current_task.append(task)
+            self._ids.add(task["id"])
+
+            with open(STORAGE, "w", encoding="utf-8") as storage:
+                json.dump(current_task, storage, ensure_ascii=False, indent=4)
+
+    def update(self, id: int, description: str) -> dict:
+        """
+
+        :param id:
+        :param description:
+        :return:
+        """
+        task = self.search(id)
+        task["description"] = description
+        self.store(task)
+
+        return task
+
+    def remove(self, id: int):
+        """
+
+        :param id:
+        :return:
+        """
+        update_list = [task for task in self.list if task["id"] != id]
+
+        self._ids.discard(id)
 
         with open(STORAGE, "w", encoding="utf-8") as storage:
-            json.dump(current_data, storage, ensure_ascii=False, indent=4)
+            json.dump(update_list, storage, ensure_ascii=False, indent=4)
