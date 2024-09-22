@@ -3,9 +3,6 @@ from .constants import STORAGE
 
 
 class Storage:
-
-    _ids = None
-
     @property
     def list(self) -> dict:
         """
@@ -14,11 +11,25 @@ class Storage:
         """
         with open(STORAGE, "r", encoding="utf-8") as storage:
             tasks = json.load(storage)
-
-            if not self._ids:
-                self._ids = set([task["id"] for task in tasks])
-
         return tasks
+
+    @property
+    def list_ids(self):
+        """
+
+        :return:
+        """
+        return set(task["id"] for task in self.list)
+
+    @staticmethod
+    def save(list_data: list):
+        """
+
+        :param list_data:
+        :return:
+        """
+        with open(STORAGE, "w", encoding="utf-8") as storage:
+            json.dump(list_data, storage, ensure_ascii=False, indent=4)
 
     def search(self, id: int):
         """
@@ -35,13 +46,18 @@ class Storage:
         :return:
         """
         current_task = self.list
+        current_task.append(task)
 
-        if task["id"] not in self._ids:
-            current_task.append(task)
-            self._ids.add(task["id"])
+        self.save(current_task)
 
-            with open(STORAGE, "w", encoding="utf-8") as storage:
-                json.dump(current_task, storage, ensure_ascii=False, indent=4)
+    def remove(self, id: int):
+        """
+
+        :param id:
+        :return:
+        """
+        update_list = [task for task in self.list if task["id"] != id]
+        self.store(update_list)
 
     def update(self, id: int, description: str) -> dict:
         """
@@ -56,15 +72,16 @@ class Storage:
 
         return task
 
-    def remove(self, id: int):
+    def update_status(self, id: int, status: int) -> dict:
         """
 
         :param id:
+        :param status:
         :return:
         """
-        update_list = [task for task in self.list if task["id"] != id]
+        task = self.search(id)
+        task["status"] = status
+        self.remove(id)
+        self.store(task)
 
-        self._ids.discard(id)
-
-        with open(STORAGE, "w", encoding="utf-8") as storage:
-            json.dump(update_list, storage, ensure_ascii=False, indent=4)
+        return task

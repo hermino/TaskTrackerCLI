@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8136fc07-24ad-4662-801f-81d211919577" name="Changes" comment="Make a project challenger of roadmap.sh&#10;&#10;- Use TDD&#10;- Create test to storage tasks&#10;- Create task tracker and task manager">
+    <list default="true" id="8136fc07-24ad-4662-801f-81d211919577" name="Changes" comment="Make a project challenger of roadmap.sh&#10;&#10;- Create test for update and remove a task from json&#10;- Create a structure to prevent repetition of ids">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pypi_packages/task_tracker/task_tracker/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/pypi_packages/task_tracker/task_tracker/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pypi_packages/task_tracker/task_tracker/resources/data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pypi_packages/task_tracker/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pypi_packages/task_tracker/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pypi_packages/task_tracker/task_tracker/main.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pypi_packages/task_tracker/task_tracker/storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pypi_packages/task_tracker/task_tracker/storage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pypi_packages/task_tracker/task_tracker/tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/pypi_packages/task_tracker/task_tracker/tracker.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pypi_packages/task_tracker/tests/store_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/pypi_packages/task_tracker/tests/store_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pypi_packages/task_tracker/tests/task_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/pypi_packages/task_tracker/tests/task_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,13 +54,13 @@
     "Python tests.Python tests for store_test.test_remove_task.executor": "Debug",
     "Python tests.Python tests for store_test.test_store_task.executor": "Debug",
     "Python tests.Python tests for store_test.test_update_task.executor": "Debug",
-    "Python tests.Python tests for task_test.test_create_task.executor": "Run",
+    "Python tests.Python tests for task_test.test_create_task.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "H:/Projetos/Python/TaskTrackerCLI/.venv"
   }
 }]]></component>
-  <component name="RunManager" selected="Python tests.Python tests for store_test.test_remove_task">
+  <component name="RunManager" selected="Python tests.Python tests for task_test.test_create_task">
     <configuration name="Python tests for store_test.test_remove_task" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="TaskTrackerCLI" />
       <option name="ENV_FILES" value="" />
@@ -121,10 +123,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for task_test.test_create_task" />
+        <item itemvalue="Python tests.Python tests for store_test.test_store_task" />
         <item itemvalue="Python tests.Python tests for store_test.test_remove_task" />
         <item itemvalue="Python tests.Python tests for store_test.test_update_task" />
-        <item itemvalue="Python tests.Python tests for store_test.test_store_task" />
-        <item itemvalue="Python tests.Python tests for task_test.test_create_task" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726357564244</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Make a project challenger of roadmap.sh&#10;&#10;- Create test for update and remove a task from json&#10;- Create a structure to prevent repetition of ids">
+      <option name="closed" value="true" />
+      <created>1726444866557</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726444866558</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,20 +178,26 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Make a project challenger of roadmap.sh&#10;&#10;- Use TDD&#10;- Create test to storage tasks&#10;- Create task tracker and task manager" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make a project challenger of roadmap.sh&#10;&#10;- Use TDD&#10;- Create test to storage tasks&#10;- Create task tracker and task manager" />
+    <MESSAGE value="Make a project challenger of roadmap.sh&#10;&#10;- Create test for update and remove a task from json&#10;- Create a structure to prevent repetition of ids" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make a project challenger of roadmap.sh&#10;&#10;- Create test for update and remove a task from json&#10;- Create a structure to prevent repetition of ids" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pypi_packages/task_tracker/tests/store_test.py</url>
-          <line>38</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/pypi_packages/task_tracker/task_tracker/task.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pypi_packages/task_tracker/tests/store_test.py</url>
-          <line>37</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/pypi_packages/task_tracker/task_tracker/task.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pypi_packages/task_tracker/task_tracker/tracker.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

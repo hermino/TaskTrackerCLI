@@ -1,17 +1,17 @@
 import pytest
-from task_tracker.task import TaskManager, Task
+from task_tracker.task import TaskManager
 from task_tracker.storage import Storage
 
 storage = Storage()
-
+task_manager = TaskManager(storage)
 
 @pytest.mark.parametrize("description", [
     ("Walk with dog")
 ])
 def test_store_task(description: str):
-    task = TaskManager.create_task(description)
-    storage.store(vars(task))
-    search_task = storage.search(task.id)
+    task = task_manager.create_task(description)
+    storage.store(task)
+    search_task = storage.search(task["id"])
 
     assert search_task["description"] == description
 
