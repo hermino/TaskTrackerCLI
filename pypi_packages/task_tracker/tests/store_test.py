@@ -10,7 +10,6 @@ task_manager = TaskManager(storage)
 ])
 def test_store_task(description: str):
     task = task_manager.create_task(description)
-    storage.store(task)
     search_task = storage.search(task["id"])
 
     assert search_task["description"] == description

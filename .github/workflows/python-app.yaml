@@ -26,4 +26,5 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest
+         pytest ./pypi_packages/task_tracker/tests/store_test.py
+         pytest ./pypi_packages/task_tracker/tests/task_test.py

@@ -57,7 +57,7 @@ class Storage:
         :return:
         """
         update_list = [task for task in self.list if task["id"] != id]
-        self.store(update_list)
+        self.save(update_list)
 
     def update(self, id: int, description: str) -> dict:
         """
@@ -68,6 +68,8 @@ class Storage:
         """
         task = self.search(id)
         task["description"] = description
+
+        self.remove(id)
         self.store(task)
 
         return task
