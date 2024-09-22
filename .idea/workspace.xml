@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8136fc07-24ad-4662-801f-81d211919577" name="Changes" comment="Make a project challenger of roadmap.sh&#10;&#10;- Create test for update and remove a task from json&#10;- Create a structure to prevent repetition of ids">
+    <list default="true" id="8136fc07-24ad-4662-801f-81d211919577" name="Changes" comment="Make a project challenger of roadmap.sh&#10;&#10;- Getting options from prompt line&#10;- Structuring options to calls operations [add, delete, update,...]">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/python-app.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pypi_packages/task_tracker/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pypi_packages/task_tracker/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pypi_packages/task_tracker/task_tracker/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pypi_packages/task_tracker/task_tracker/storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pypi_packages/task_tracker/task_tracker/storage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pypi_packages/task_tracker/task_tracker/tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/pypi_packages/task_tracker/task_tracker/tracker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pypi_packages/task_tracker/tests/store_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/pypi_packages/task_tracker/tests/store_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pypi_packages/task_tracker/tests/task_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/pypi_packages/task_tracker/tests/task_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726444866558</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Make a project challenger of roadmap.sh&#10;&#10;- Getting options from prompt line&#10;- Structuring options to calls operations [add, delete, update,...]">
+      <option name="closed" value="true" />
+      <created>1727034333798</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727034333798</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -179,7 +182,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Make a project challenger of roadmap.sh&#10;&#10;- Use TDD&#10;- Create test to storage tasks&#10;- Create task tracker and task manager" />
     <MESSAGE value="Make a project challenger of roadmap.sh&#10;&#10;- Create test for update and remove a task from json&#10;- Create a structure to prevent repetition of ids" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make a project challenger of roadmap.sh&#10;&#10;- Create test for update and remove a task from json&#10;- Create a structure to prevent repetition of ids" />
+    <MESSAGE value="Make a project challenger of roadmap.sh&#10;&#10;- Getting options from prompt line&#10;- Structuring options to calls operations [add, delete, update,...]" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make a project challenger of roadmap.sh&#10;&#10;- Getting options from prompt line&#10;- Structuring options to calls operations [add, delete, update,...]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
