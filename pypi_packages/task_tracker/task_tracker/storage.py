@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 from .constants import STORAGE
 
 
@@ -50,13 +51,13 @@ class Storage:
 
         self.save(current_task)
 
-    def remove(self, id: int):
+    def remove(self, tid: int):
         """
 
-        :param id:
+        :param tid:
         :return:
         """
-        update_list = [task for task in self.list if task["id"] != id]
+        update_list = [task for task in self.list if task["id"] != int(tid)]
         self.save(update_list)
 
     def update(self, id: int, description: str) -> dict:
@@ -67,14 +68,16 @@ class Storage:
         :return:
         """
         task = self.search(id)
+
         task["description"] = description
+        task["updatedAt"] = datetime.now().isoformat()
 
         self.remove(id)
         self.store(task)
 
         return task
 
-    def update_status(self, id: int, status: int) -> dict:
+    def update_status(self, id: int, status: str) -> dict:
         """
 
         :param id:
@@ -83,6 +86,8 @@ class Storage:
         """
         task = self.search(id)
         task["status"] = status
+        task["updatedAt"] = datetime.now().isoformat()
+
         self.remove(id)
         self.store(task)
 

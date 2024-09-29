@@ -1,16 +1,51 @@
 [
     {
-        "id": 1,
-        "description": "Walk with dog",
-        "status": 1,
-        "createdAt": "2024-09-22T16:10:21.739507",
-        "updatedAt": "2024-09-22T16:10:21.739507"
+        "id": 3,
+        "description": "Buy groceriesm 5",
+        "status": "todo",
+        "createdAt": "2024-09-29T14:49:11.338968",
+        "updatedAt": "2024-09-29T14:49:11.338968"
+    },
+    {
+        "id": 4,
+        "description": "Buy groceriesm 6",
+        "status": "todo",
+        "createdAt": "2024-09-29T14:49:15.658083",
+        "updatedAt": "2024-09-29T14:49:15.658083"
     },
     {
         "id": 2,
+        "description": "Buy groceries and cook dinner",
+        "status": "todo",
+        "createdAt": "2024-09-29T14:49:08.474769",
+        "updatedAt": "2024-09-29T14:49:38.622941"
+    },
+    {
+        "id": 5,
+        "description": "Buy groceries and cook dinner",
+        "status": "todo",
+        "createdAt": "2024-09-29T14:49:19.326387",
+        "updatedAt": "2024-09-29T14:50:09.204214"
+    },
+    {
+        "id": 6,
+        "description": "Walk with dog",
+        "status": "todo",
+        "createdAt": "2024-09-29T14:55:36.737480",
+        "updatedAt": "2024-09-29T14:55:36.738481"
+    },
+    {
+        "id": 6,
+        "description": "Walk with dog",
+        "status": "todo",
+        "createdAt": "2024-09-29T14:55:36.743481",
+        "updatedAt": "2024-09-29T14:55:36.743481"
+    },
+    {
+        "id": 7,
         "description": "Clean the house",
-        "status": 1,
-        "createdAt": "2024-09-22T16:10:21.741508",
-        "updatedAt": "2024-09-22T16:10:21.741508"
+        "status": "todo",
+        "createdAt": "2024-09-29T14:55:36.754493",
+        "updatedAt": "2024-09-29T14:55:36.754493"
     }
 ]

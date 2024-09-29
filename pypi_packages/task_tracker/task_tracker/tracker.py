@@ -7,8 +7,8 @@ storage = Storage()
 task_manager = TaskManager(storage)
 
 options_status = {
-    "mark-done": 0,
-    "mark-in-progress": 2
+    "mark-done": "done",
+    "mark-in-progress": "in-progress"
 }
 
 operations = {
@@ -18,9 +18,9 @@ operations = {
     "mark-done": task_manager.update_task_status,
     "mark-in-progress": task_manager.update_task_status,
     "list": {
-        "done": task_manager.list_task(0),
-        "todo": task_manager.list_task(1),
-        "in-progress": task_manager.list_task(2),
+        "done": task_manager.list_task("done"),
+        "todo": task_manager.list_task("todo"),
+        "in-progress": task_manager.list_task("in-progress"),
     }
 }
 
@@ -38,7 +38,7 @@ def main():
         return operations[operation](int(arg1), arg_two)
     elif operation and arg1:
         if arg1 in ["done", "todo", "in-progress"]:
-            return operations[operation][arg1]()
+            return operations[operation][arg1]
         else:
             return operations[operation](arg1)
     elif operation == "list":

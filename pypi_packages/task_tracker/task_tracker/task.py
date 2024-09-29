@@ -25,7 +25,7 @@ class TaskManager:
         task = dict(
             id=last_id,
             description=description,
-            status=1,
+            status="todo",
             createdAt=datetime.now().isoformat(),
             updatedAt=datetime.now().isoformat()
         )
@@ -57,13 +57,20 @@ class TaskManager:
         :param description:
         :return:
         """
-        return self.storage.update(tid, description)
+        try:
+            return self.storage.update(tid, description)
+        except Exception as e:
+            raise Exception(f"This ID doesn't exists: {e}")
 
-    def update_task_status(self, tid: int, status: int):
+    def update_task_status(self, tid: int, status: str):
         """
 
         :param tid:
         :param status:
         :return:
         """
-        return self.storage.update_status(tid, status)
+        try:
+            return self.storage.update_status(tid, status)
+        except Exception as e:
+            raise Exception(f"This STATUSpyt doesn't exists: {e}")
+
