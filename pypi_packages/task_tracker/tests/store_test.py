@@ -26,7 +26,7 @@ def test_search_task(id: int):
     (1, "Walk with cat")
 ])
 def test_update_task(id: int, description: str):
-    task = storage.update(id, description)
+    task = storage.update_description(id, description)
     assert task["description"] == description
 
 

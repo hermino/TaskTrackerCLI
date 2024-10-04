@@ -1,6 +1,7 @@
 from datetime import datetime
 from typing import Any
 
+
 class TaskManager:
     _ids = set()
 
@@ -11,8 +12,8 @@ class TaskManager:
     def create_task(self, description: str) -> dict:
         """Create a task
 
-        :param description:
-        :return:
+        :param description: description of task
+        :return: task created
         """
         try:
             last_id = list(self._ids)[-1] + 1
@@ -34,43 +35,42 @@ class TaskManager:
         return task
 
     def list_task(self, status: int):
-        """
+        """Action to list of task about status
 
-        :param status:
-        :return:
+        :param status: status to list task
+        :return: list of task selected
         """
         return [task for task in self.storage.list if task["status"] == status]
 
     def remove_task(self, tid: int):
-        """
+        """Remove one task by id
 
-        :param tid:
-        :return:
+        :param tid: id of task
         """
         self.storage.remove(tid)
         self._ids.discard(id)
 
     def update_task_description(self, tid: int, description: str):
-        """
+        """Update description of task
 
-        :param tid:
-        :param description:
-        :return:
+        :param tid: id of task
+        :param description: new description of task
+        :return: task updated or exception error
         """
         try:
-            return self.storage.update(tid, description)
+            return self.storage.update_description(tid, description)
         except Exception as e:
             raise Exception(f"This ID doesn't exists: {e}")
 
     def update_task_status(self, tid: int, status: str):
-        """
+        """Update status of task
 
-        :param tid:
-        :param status:
-        :return:
+        :param tid: id of task
+        :param status: new status of task
+        :return: task updated or exception error
         """
         try:
             return self.storage.update_status(tid, status)
         except Exception as e:
-            raise Exception(f"This STATUSpyt doesn't exists: {e}")
+            raise Exception(f"This STATUS doesn't exists: {e}")
 
