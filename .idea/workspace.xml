@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8136fc07-24ad-4662-801f-81d211919577" name="Changes" comment="Make a project challenger of roadmap.sh&#10;&#10;- Adding docstring in methods">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8136fc07-24ad-4662-801f-81d211919577" name="Changes" comment="Make a project challenger of roadmap.sh&#10;&#10;- Adding README.md" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -181,7 +178,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728081394957</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Make a project challenger of roadmap.sh&#10;&#10;- Adding README.md">
+      <option name="closed" value="true" />
+      <created>1728082169245</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728082169245</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Make a project challenger of roadmap.sh&#10;&#10;- Adding README.md">
+      <option name="closed" value="true" />
+      <created>1728082309860</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728082309860</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,6 +213,7 @@
     <MESSAGE value="Make a project challenger of roadmap.sh&#10;&#10;- Create test for update and remove a task from json&#10;- Create a structure to prevent repetition of ids" />
     <MESSAGE value="Make a project challenger of roadmap.sh&#10;&#10;- Getting options from prompt line&#10;- Structuring options to calls operations [add, delete, update,...]" />
     <MESSAGE value="Make a project challenger of roadmap.sh&#10;&#10;- Adding docstring in methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make a project challenger of roadmap.sh&#10;&#10;- Adding docstring in methods" />
+    <MESSAGE value="Make a project challenger of roadmap.sh&#10;&#10;- Adding README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make a project challenger of roadmap.sh&#10;&#10;- Adding README.md" />
   </component>
 </project>
