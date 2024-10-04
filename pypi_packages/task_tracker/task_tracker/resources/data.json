@@ -1,16 +1,1 @@
-[
-    {
-        "id": 1,
-        "description": "Walk with dog",
-        "status": "todo",
-        "createdAt": "2024-10-04T18:35:38.426373",
-        "updatedAt": "2024-10-04T18:35:38.426373"
-    },
-    {
-        "id": 2,
-        "description": "Clean the house",
-        "status": "todo",
-        "createdAt": "2024-10-04T18:35:38.427374",
-        "updatedAt": "2024-10-04T18:35:38.427374"
-    }
-]
+[]
